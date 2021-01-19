@@ -1,6 +1,6 @@
 * { box-sizing: border-box; }
 body {
-    font-family: 'Open Sans';
+    font-family: 'Helvetica Neue','Open Sans';
     font-size:14px;
 }
 .topnav.navbar {
@@ -17,7 +17,7 @@ body {
 .topnav .nav>li>a:hover,
 .dropdown.open .dropdown-toggle {
     background:none;
-    color:#59b210;
+    color:#00A7EC;
 }
 header {
     padding-top:40px;
@@ -44,13 +44,13 @@ header {
     display:inline;
 }
 .head_help {
-    background-image:url('../images/phone.png');
+    background-image:url('../images/phone.svg');
 }
 .head_email {
-    background-image:url('../images/mail.png');
+    background-image:url('../images/mail.svg');
 }
 .head_email span {
-    color:#59b210;
+    color:#00A7EC;
 }
 .search_area {
     clear:both;
@@ -84,7 +84,7 @@ header {
     width:15%;
     height:44px;
     float:left;
-    background-color:#59b210;
+    background-color:#00A7EC;
     background-image:url('../images/search.png');
     background-size:auto 50%;
     background-repeat:no-repeat;
@@ -112,7 +112,7 @@ header {
     color:#000;
 }
 .carttotal span {
-    color:#59b210;
+    color:#00A7EC;
     font-size:20px;
     font-weight: bold;
 }
@@ -124,7 +124,7 @@ header {
     color:#FFF;
     font-weight: bold;
     font-size:12px;
-    background-color:#59b210;
+    background-color:#00A7EC;
     border-radius:10px;
 }
 
@@ -150,7 +150,7 @@ header {
     border-right: 1px solid #e0e0e0;
 }
 .categoryarea .dropdown {
-    background-color:#59b210;
+    background-color:#00A7EC;
     border-radius:5px;
 }
 .categoryarea .dropdown .dropdown-toggle {
@@ -165,7 +165,7 @@ header {
 }
 .categoryarea .nav>li.dropdown>a:focus,
 .categoryarea .nav>li.dropdown>a:hover {
-    background-color:#59b210;
+    background-color:#00A7EC;
     border-radius:5px;
 }
 
@@ -242,7 +242,7 @@ footer {
     border-radius:0 5px 5px 0;
     margin-left: -5px;
     color:#FFF;
-    background-color:#59b210;
+    background-color:#00A7EC;
 }
 .subarea input[type=submit]:hover {
     background-color:#60c011;
@@ -261,7 +261,7 @@ footer h3 {
     text-decoration: none;
 }
 .linkgroups a:hover {
-    color:#59b210;
+    color:#00A7EC;
 }
 .linkgroups ul,
 .linkgroups li {
