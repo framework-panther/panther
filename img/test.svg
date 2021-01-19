@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <linearGradient id="linearGradient91" x1="16.432" x2="16.432" y2="32.863" gradientTransform="scale(1.6432 .60858)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#444D56" offset="0"/>
+   <stop stop-color="#24292E" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient93" x1="15.811" x2="15.811" y2="31.623" gradientTransform="scale(1.5811 .63246)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#34D058" offset="0"/>
+   <stop stop-color="#28A745" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g transform="translate(0 -32.961)" fill-rule="evenodd">
+  <g transform="translate(0 32.961)" font-family="'DejaVu Sans', Verdana, Geneva, sans-serif" font-size="11px">
+   <path d="m0 3c0-1.6569 1.3552-3 3.027-3h50.973v20h-50.973c-1.6718 0-3.027-1.3431-3.027-3z" fill="url(#linearGradient91)" fill-rule="nonzero"/>
+   <text fill="#010101" fill-opacity=".3"><tspan x="22.198198" y="15">tests</tspan></text>
+   <text fill="#ffffff"><tspan x="22.198198" y="14">tests</tspan></text>
+  </g>
+  <g transform="translate(54 32.961)" font-family="'DejaVu Sans', Verdana, Geneva, sans-serif" font-size="11px">
+   <path d="m0 0h46.939c1.69 0 3.061 1.343 3.061 3v14c0 1.657-1.37 3-3.061 3h-46.939z" fill="url(#linearGradient93)" fill-rule="nonzero"/>
+   <text fill="#010101" fill-opacity=".3"><tspan x="4" y="15">passing</tspan></text>
+   <text fill="#ffffff"><tspan x="4" y="14">passing</tspan></text>
+  </g>
+  <path d="m11 35.961c-3.868 0-7 3.132-7 7a6.996 6.996 0 0 0 4.786 6.641c0.35 0.062 0.482-0.148 0.482-0.332 0-0.166-0.01-0.718-0.01-1.304-1.758 0.324-2.213-0.429-2.353-0.822-0.079-0.202-0.42-0.823-0.717-0.99-0.245-0.13-0.595-0.454-0.01-0.463 0.552-9e-3 0.946 0.508 1.077 0.718 0.63 1.058 1.636 0.76 2.039 0.577 0.061-0.455 0.245-0.761 0.446-0.936-1.557-0.175-3.185-0.779-3.185-3.456 0-0.762 0.271-1.392 0.718-1.882-0.07-0.175-0.315-0.892 0.07-1.855 0 0 0.586-0.183 1.925 0.718a6.5 6.5 0 0 1 1.75-0.236 6.5 6.5 0 0 1 1.75 0.236c1.338-0.91 1.925-0.718 1.925-0.718 0.385 0.963 0.14 1.68 0.07 1.855 0.446 0.49 0.717 1.112 0.717 1.882 0 2.686-1.636 3.28-3.194 3.456 0.254 0.219 0.473 0.639 0.473 1.295 0 0.936-9e-3 1.689-9e-3 1.925 0 0.184 0.131 0.402 0.481 0.332a7.011 7.011 0 0 0 4.769-6.641c0-3.867-3.133-7-7-7z" fill="#959da5"/>
+ </g>
+</svg>
