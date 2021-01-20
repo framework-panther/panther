@@ -22,12 +22,12 @@
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <p>
+                                <p class="topnav-text">
                                     <img src="<?php echo BASE_URL; ?>assets/images/en-gb.png" /><a href="<?php echo BASE_URL; ?>lang/set/en"> English</a>
                                 </p>
                             </li>
                             <li>
-                                <p>
+                                <p class="topnav-text">
                                     <img src="<?php echo BASE_URL; ?>assets/images/pt-br.png" /><a href="<?php echo BASE_URL; ?>lang/set/pt-br"> Português</a>
                                 </p>
                             </li>
