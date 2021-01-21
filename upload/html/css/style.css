@@ -157,8 +157,8 @@ footer {
     margin-bottom:50px;
 }
 .subarea form {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 .subarea:before {
     content: "";
