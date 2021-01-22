@@ -90,7 +90,7 @@
         </header>
 
         <!--nav class="navbar navbar-expand-md bg-primary navbar-dark "-->
-        <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #00A7EC;">    
+        <nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(to right, #00A7EC, #C7DEE8);">    
 
             <!-- Toggler/collapsibe Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -99,7 +99,12 @@
 
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <img width="30" src="<?php echo BASE_URL; ?>assets/images/list.svg" />
+                <img srcset="<?php echo BASE_URL; ?>assets/images/list.svg 800w"
+                    sizes="(max-width: 799px) 0vw,
+                    (min-width: 800px) 800px"
+                src="<?php echo BASE_URL; ?>assets/images/list.svg">
+
+                <!--img width="30" src="<?php /*echo BASE_URL;*/ ?>assets/images/list.svg" /-->
                 <ul class="navbar-nav">
 
                     <li class="nav-item dropdown">
