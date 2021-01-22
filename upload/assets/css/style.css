@@ -245,13 +245,15 @@ footer h3 {
 .product_item {
 	padding:10px;
 }
+
 .product_item:hover {
-	background-color:#EEE;
+	border:1px solid #9E9E9E;
 }
 .product_item a {
 	text-decoration: none;
 	display:block;
 }
+
 .product_tags {
 	position:absolute;
 }
@@ -267,12 +269,15 @@ footer h3 {
 	color:#FFF;
 }
 .product_tag_red {
+        font-weight: 500;
 	background-color:#F8484A;
 }
 .product_tag_green {
-	background-color:#0F9D58;
+        font-weight: 500;
+	background-color:#59B210;
 }
 .product_tag_blue {
+        font-weight: 500;
 	background-color:#0B5ED7;
 }
 .product_name {
@@ -295,3 +300,26 @@ footer h3 {
 	font-weight: bold;
 	margin-top:15px;
 }
+
+.paginationItem {
+	width:40px;
+	height:40px;
+	border:1px solid #DDD;
+	font-size:13px;
+	text-align: center;
+	line-height:40px;
+	display:inline-block;
+}
+.paginationItem:hover,
+.pag_active {
+	border:1px solid #0B5ED7;
+}
+.paginationItem a {
+	display:block;
+	color:#000;
+	text-decoration: none;
+}
+.paginationArea {
+	margin-top:30px;
+}
+

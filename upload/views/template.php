@@ -101,20 +101,24 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
 
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#"><?php $this->lang->get('SELECTCATEGORY'); ?></a>
+                    <li class="nav-item dropdown">
+                        <!--a class="nav-link text-white" href="#"><?php /*$this->lang->get('SELECTCATEGORY');*/ ?></a-->
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            <?php $this->lang->get('SELECTCATEGORY'); ?>
+                        </a>
+                        
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">CATEGORIA 1</a>
+                            <a class="dropdown-item" href="#">CATEGORIA 2</a>
+                            <a class="dropdown-item" href="#">CATEGORIA 3</a>
+                        </div>
                     </li>
 
                     <!-- Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
                             CATEGORIA 1
                         </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Subcategoria</a>
-                            <a class="dropdown-item" href="#">Subcategoria</a>
-                            <a class="dropdown-item" href="#">Subcategoria</a>
-                        </div>
                     </li>
 
 
