@@ -29,14 +29,14 @@ O **Projeto Panther** é uma plataforma de loja online para lojistas brasileiros
 - [x] #004: Estrutura Inicial do Projeto
 - [x] #005: Sistema Multi-linguagem (1/2)
 - [x] #006: Sistema Multi-linguagem (2/2)
+- [x] #007: Criando a Home (1/4)
 
 ### Tarefas em andamento:
 
-- [x] #007: Criando a Home (1/4)
+- [ ] #008: Criando a Home (2/4)
 
 ### Próximas tarefas:
 
-- [ ] #008: Criando a Home (2/4)
 - [ ] #009: Criando a Home (3/4)
 - [ ] #010: Criando a Home (4/4)
 - [ ] #011: Criando a Paginação da Home
