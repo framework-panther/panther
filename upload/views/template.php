@@ -99,6 +99,7 @@
 
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <img width="30" src="<?php echo BASE_URL; ?>assets/images/list.svg" />
                 <ul class="navbar-nav">
 
                     <li class="nav-item dropdown">
