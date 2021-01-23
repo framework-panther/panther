@@ -89,48 +89,44 @@
             </div>
         </header>
 
-        <!--nav class="navbar navbar-expand-md bg-primary navbar-dark "-->
-        <nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(to right, #00A7EC, #C7DEE8);">    
+        <!-- xxxxxxxxxxxxxxxx---->
+        <nav class="navbar navbar-expand-md" style="background-image: linear-gradient(to right, #00A7EC, #C7DEE8);">    
 
             <!-- Toggler/collapsibe Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <div class="dropdown">
                 <img srcset="<?php echo BASE_URL; ?>assets/images/list.svg 800w"
-                    sizes="(max-width: 799px) 0vw,
-                    (min-width: 800px) 800px"
-                src="<?php echo BASE_URL; ?>assets/images/list.svg">
-
-                <!--img width="30" src="<?php /*echo BASE_URL;*/ ?>assets/images/list.svg" /-->
-                <ul class="navbar-nav">
-
-                    <li class="nav-item dropdown">
-                        <!--a class="nav-link text-white" href="#"><?php /*$this->lang->get('SELECTCATEGORY');*/ ?></a-->
-                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                            <?php $this->lang->get('SELECTCATEGORY'); ?>
+                     sizes="(max-width: 799px) 0vw,
+                     (min-width: 800px) 800px"
+                     src="<?php echo BASE_URL; ?>assets/images/list.svg">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background: #00A7EC;">
+                    <?php $this->lang->get('SELECTCATEGORY'); ?>
+                </button>
+                <div class="dropdown-menu">
+                    <?php foreach ($viewData['categories'] as $cat): ?>
+                        <a class="dropdown-item" href="#">
+                            <?php echo $cat['name']; ?>   
                         </a>
-                        
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">CATEGORIA 1</a>
-                            <a class="dropdown-item" href="#">CATEGORIA 2</a>
-                            <a class="dropdown-item" href="#">CATEGORIA 3</a>
+                    <div class="dropdown-item">
+                        <?php
+                            if (count($cat['subs']) > 0) {
+                                $this->loadView('menu_subcategory', array(
+                                    'subs' => $cat['subs'],
+                                    'level' => 1
+                                ));
+                            }
+                        ?>
+                        <div>
+                            <?php endforeach; ?>
                         </div>
-                    </li>
-
-                    <!-- Dropdown -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            CATEGORIA 1
-                        </a>
-                    </li>
-
-
-                </ul>
-            </div>
+                    </div>        
+                </div>
+            </div>           
         </nav>
+        <!-- xxxxxxxxxxxxxxxx---->
 
         <section>
             <div class="container">
@@ -263,7 +259,7 @@
             </div>
         </footer>
         <script type="text/javascript">var BASE_URL = '<?php echo BASE_URL; ?>';</script>
-        
+
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
         <script src="<?php echo BASE_URL; ?>assets/js/jquery-3.5.1.slim.min.js"></script>
         <script src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>

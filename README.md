@@ -34,15 +34,15 @@ O **Projeto Panther** é uma plataforma de loja online para lojistas brasileiros
 - [x] #009: Criando a Home (3/4)
 - [x] #010: Criando a Home (4/4)
 - [x] #011: Criando a Paginação da Home
+- [x] #012: Listando as categorias e sub-categorias (1/2)
+- [x ] #013: Listando categorias e sub no menu
 
 ### Tarefas em andamento:
 
-- [ ] #012: Listando as categorias e sub-categorias (1/2)
+- [ ] #014: Filtrando por Categoria
 
 ### Próximas tarefas:
 
-- [ ] #013: Listando categorias e sub no menu
-- [ ] #014: Filtrando por Categoria
 - [ ] #015: Implementação do Filtro (1/5)
 - [ ] #016: Implementação do Filtro (2/5)
 - [ ] #017: Implementação do Filtro (3/5)
