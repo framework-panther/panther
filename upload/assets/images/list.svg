@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="34" height="34" version="1.1" viewBox="0 0 34.000001 34.000001" xmlns="http://www.w3.org/2000/svg">
- <g transform="matrix(.5011 0 0 .5011 8.5123 .95519)" fill="#fff">
+<svg width="18" height="14.138" version="1.1" viewBox="0 0 18 14.138" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="matrix(.26529 0 0 .26529 4.3964 -1.5149)" fill="#fff">
   <g fill="#fff">
    <rect x="-1.7616" y="5.71" width="53.04" height="9.3898" ry="1.3958" stroke-width="1.0248"/>
    <rect x="-16.572" y="5.71" width="10.243" height="9.3898" ry="1.3958" stroke-width=".45037"/>
