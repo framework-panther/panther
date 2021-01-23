@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Jan-2021 às 20:18
+-- Tempo de geração: 23-Jan-2021 às 18:53
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.0
 
@@ -58,7 +58,12 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `sub`, `name`) VALUES
-(6, NULL, 'Monitor');
+(6, NULL, 'Monitor'),
+(14, NULL, 'Som'),
+(15, 14, 'Headphones'),
+(16, 14, 'Microfones'),
+(17, 15, 'Com Fio'),
+(18, 15, 'Sem Fio');
 
 -- --------------------------------------------------------
 
@@ -346,7 +351,7 @@ ALTER TABLE `brands`
 -- AUTO_INCREMENT de tabela `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de tabela `coupons`
