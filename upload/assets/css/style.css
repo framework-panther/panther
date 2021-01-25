@@ -338,6 +338,10 @@ footer h3 {
   margin: 0;
   padding: 0;
 }
+
+.card-body a:hover {
+    text-decoration: none;
+}
 /* Fim Menu accordion */
 
 .breadcrumb-item+.breadcrumb-item::before {
@@ -346,4 +350,42 @@ footer h3 {
     padding-left: .5rem;
     color: #1474ca;
     content: "/";
+}
+
+.bs-example{
+    margin: 20px;
+}
+
+.breadcrumb {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: .75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-image: linear-gradient(to right, #00A7EC, #C7DEE8);
+    border-radius: .25rem;
+}
+
+/* Style to change separator  */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: #FFFFFF;
+}
+
+.bs-example a {
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: transparent; 
+}
+
+.bs-example a:hover {
+    color: #6c757d;
+    text-decoration: none;
+    background-color: transparent; 
+}
+
+.breadcrumb-item.active {
+    color: #D2D4D8;
 }

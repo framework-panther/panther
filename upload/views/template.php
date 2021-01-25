@@ -91,52 +91,17 @@
 
         <!-- xxxxx Menu Novo xxxxxx---->
 
-<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
-  </ol>
-</nav>
+        <div class="bs-example">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Products</a></li>
+                    <li class="breadcrumb-item active">Accessories</li>
+                </ol>
+            </nav>
+        </div>
 
         <!-- xxxxx Fim Menu Novo xxxxxx---->
-
-        <!-- xxxxxxxxxxxxxxxx---->
-        <nav class="navbar navbar-expand-md" style="background-image: linear-gradient(to right, #00A7EC, #C7DEE8);">    
-
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="dropdown">
-                <img srcset="<?php echo BASE_URL; ?>assets/images/list.svg 800w"
-                     sizes="(max-width: 799px) 0vw,
-                     (min-width: 800px) 800px"
-                     src="<?php echo BASE_URL; ?>assets/images/list.svg">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background: #00A7EC;">
-                    <?php $this->lang->get('SELECTCATEGORY'); ?>
-                </button>
-                <div class="dropdown-menu">
-                    <?php foreach ($viewData['categories'] as $cat): ?>
-                        <a class="dropdown-item" href="#">
-                            <?php echo $cat['name']; ?>   
-                        </a>
-                        <div class="dropdown-item">
-                            <?php
-                            if (count($cat['subs']) > 0) {
-                                $this->loadView('menu_subcategory', array(
-                                    'subs' => $cat['subs'],
-                                    'level' => 1
-                                ));
-                            }
-                            ?>
-                            <div>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>        
-                </div>
-            </div>  
-        </nav>
 
         <section>
             <div class="container">
