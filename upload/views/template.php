@@ -89,6 +89,17 @@
             </div>
         </header>
 
+        <!-- xxxxx Menu Novo xxxxxx---->
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Library</li>
+  </ol>
+</nav>
+
+        <!-- xxxxx Fim Menu Novo xxxxxx---->
+
         <!-- xxxxxxxxxxxxxxxx---->
         <nav class="navbar navbar-expand-md" style="background-image: linear-gradient(to right, #00A7EC, #C7DEE8);">    
 
@@ -110,28 +121,68 @@
                         <a class="dropdown-item" href="#">
                             <?php echo $cat['name']; ?>   
                         </a>
-                    <div class="dropdown-item">
-                        <?php
+                        <div class="dropdown-item">
+                            <?php
                             if (count($cat['subs']) > 0) {
                                 $this->loadView('menu_subcategory', array(
                                     'subs' => $cat['subs'],
                                     'level' => 1
                                 ));
                             }
-                        ?>
-                        <div>
+                            ?>
+                            <div>
                             <?php endforeach; ?>
                         </div>
                     </div>        
                 </div>
-            </div>           
+            </div>  
         </nav>
-        <!-- xxxxxxxxxxxxxxxx---->
 
         <section>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
+
+                        <!-- Menu Accordion ---->
+
+                        <div id="accordion">
+                            <?php foreach ($viewData['categories'] as $cat): ?>
+                                <?php
+                                if (count($cat['subs']) == 0) {
+                                    echo   '<div class="card">
+                                                <div class="card-header">
+                                                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">';
+                                    echo                $cat['name'];
+                                    echo            '</a>
+                                                </div>
+                                            </div>';
+                                }
+                                ?>
+
+                                <?php
+                                if (count($cat['subs']) > 0) {
+                                    echo '<div class="card" style="list-style: none;">';
+                                    echo '   <div class="card-header">';
+                                    echo '       <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">';
+                                    echo $cat['name'];
+                                    echo '       </a>';
+                                    echo '   </div>';
+                                    echo '   <div id="collapseThree" class="collapse" data-parent="#accordion">';
+                                    echo '   <div class="card-body">';
+                                                $this->loadView('menu_subcategory', array(
+                                                    'subs' => $cat['subs'],
+                                                    'level' => 1
+                                                ));
+                                    echo '   </div>';
+                                    echo '   </div>';
+                                    echo '</div>';
+                                }
+                                ?>
+                            <?php endforeach; ?>
+                        </div>
+
+                        <!-- Fim Menu Accordion ---->
+
                         <aside>
                             <h1><?php $this->lang->get('FILTER'); ?></h1>
                             <div class="filterarea">
@@ -258,11 +309,12 @@
                 </div>
             </div>
         </footer>
+
         <script type="text/javascript">var BASE_URL = '<?php echo BASE_URL; ?>';</script>
 
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
         <script src="<?php echo BASE_URL; ?>assets/js/jquery-3.5.1.slim.min.js"></script>
         <script src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
-
+        <script src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
     </body>
 </html>

@@ -328,6 +328,22 @@ footer h3 {
 }
 
 .dropdown-menu a:hover {
-  color: #808080;
-  text-decoration: none;
+    color: #808080;
+    text-decoration: none;
+}
+
+/* Menu accordion */
+.card ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* Fim Menu accordion */
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    color: #1474ca;
+    content: "/";
 }
