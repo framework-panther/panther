@@ -1,7 +1,8 @@
 <?php
+
 class homeController extends controller {
 
-	private $user;
+    private $user;
 
     public function __construct() {
         parent::__construct();
@@ -17,7 +18,7 @@ class homeController extends controller {
         $offset = 0;
         $limit = 3;
 
-        if(!empty($_GET['p'])) {
+        if (!empty($_GET['p'])) {
             $currentPage = $_GET['p'];
         }
 
