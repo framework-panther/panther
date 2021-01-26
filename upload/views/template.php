@@ -1,57 +1,34 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html>
     <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+        <meta charset="utf-8" />
         <title>Loja 3.0</title>
         <link rel="shortcut icon" href="<?php echo BASE_URL; ?>assets/images/favicon.png" />
-
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css">        
-
-        <!-- CSS -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css" type="text/css" />
-
     </head>
     <body>
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-                <ul class="navbar-nav mr-auto">   
-                    <li class="nav-item active">
-                        <a class="nav-link" href="<?php echo BASE_URL; ?>"><?php $this->lang->get('HOME'); ?><span class="sr-only">(página atual)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo BASE_URL; ?>contact"><?php $this->lang->get('CONTACT'); ?></a>
-                    </li>
+        <nav class="navbar topnav">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="<?php echo BASE_URL; ?>"><?php $this->lang->get('HOME'); ?></a></li>
+                    <li><a href="<?php echo BASE_URL; ?>contact"><?php $this->lang->get('CONTACT'); ?></a></li>
                 </ul>
-                <ul class="navbar-nav navbar-right">   
-                    <li class="nav-item dropdown">                       
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?php $this->lang->get('LANGUAGE'); ?>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <p class="topnav-text">
-                                <img src="<?php echo BASE_URL; ?>assets/images/en-gb.png" /><a href="<?php echo BASE_URL; ?>lang/set/en"> English</a>
-                            <p>
-                            <p class="topnav-text">
-                                <img src="<?php echo BASE_URL; ?>assets/images/pt-br.png" /><a href="<?php echo BASE_URL; ?>lang/set/pt-br"> Português</a>
-                            <p>
-                        </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php $this->lang->get('LANGUAGE'); ?>
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo BASE_URL; ?>lang/set/en"> English</a></li>
+                            <li><a href="<?php echo BASE_URL; ?>lang/set/pt-br">Português</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo BASE_URL; ?>login"><?php $this->lang->get('LOGIN'); ?></a>
-                    </li>
+                    <li><a href="<?php echo BASE_URL; ?>login"><?php $this->lang->get('LOGIN'); ?></a></li>
                 </ul>
-            </div>            
+            </div>
         </nav>
-
         <header>
             <div class="container">
                 <div class="row">
@@ -70,7 +47,7 @@
                                 </select>
                                 <input type="submit" value="" />
                             </form>
-                        </div> 
+                        </div>
                     </div>
                     <div class="col-sm-3">
                         <a href="<?php echo BASE_URL; ?>cart">
@@ -84,70 +61,48 @@
                                 </div>
                             </div>
                         </a>
-                    </div>                  
-                </div>                
+                    </div>
+                </div>
             </div>
         </header>
-
-        <!-- xxxxx Menu Novo xxxxxx---->
-
-        <div class="bs-example">
-            <nav>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Products</a></li>
-                    <li class="breadcrumb-item active">Accessories</li>
-                </ol>
+        <div class="categoryarea">
+            <nav class="navbar">
+                <div class="container">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php $this->lang->get('SELECTCATEGORY'); ?>
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <?php foreach ($viewData['categories'] as $cat): ?>
+                                    <li>
+                                        <a href="<?php echo BASE_URL . 'categories/enter/' . $cat['id']; ?>">
+                                            <?php echo $cat['name']; ?>
+                                        </a>
+                                    </li>
+                                    <?php
+                                    if (count($cat['subs']) > 0) {
+                                        $this->loadView('menu_subcategory', array(
+                                            'subs' => $cat['subs'],
+                                            'level' => 1
+                                        ));
+                                    }
+                                    ?>
+                                <?php endforeach; ?>
+                            </ul>
+                        </li>
+                        <?php if (isset($viewData['category_filter'])): ?>
+                            <?php foreach ($viewData['category_filter'] as $cf): ?>
+                                <li><a href="<?php echo BASE_URL; ?>categories/enter/<?php echo $cf['id']; ?>"><?php echo $cf['name']; ?></a></li>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </ul>
+                </div>
             </nav>
         </div>
-
-        <!-- xxxxx Fim Menu Novo xxxxxx---->
-
         <section>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
-
-                        <!-- Menu Accordion ---->
-
-                        <div id="accordion">
-                            <?php foreach ($viewData['categories'] as $cat): ?>
-                                <?php
-                                if (count($cat['subs']) == 0) {
-                                    echo   '<div class="card">
-                                                <div class="card-header">
-                                                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">';
-                                    echo                $cat['name'];
-                                    echo            '</a>
-                                                </div>
-                                            </div>';
-                                }
-                                ?>
-
-                                <?php
-                                if (count($cat['subs']) > 0) {
-                                    echo '<div class="card" style="list-style: none;">';
-                                    echo '   <div class="card-header">';
-                                    echo '       <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">';
-                                    echo $cat['name'];
-                                    echo '       </a>';
-                                    echo '   </div>';
-                                    echo '   <div id="collapseThree" class="collapse" data-parent="#accordion">';
-                                    echo '   <div class="card-body">';
-                                                $this->loadView('menu_subcategory', array(
-                                                    'subs' => $cat['subs'],
-                                                    'level' => 1
-                                                ));
-                                    echo '   </div>';
-                                    echo '   </div>';
-                                    echo '</div>';
-                                }
-                                ?>
-                            <?php endforeach; ?>
-                        </div>
-
-                        <!-- Fim Menu Accordion ---->
-
                         <aside>
                             <h1><?php $this->lang->get('FILTER'); ?></h1>
                             <div class="filterarea">
@@ -155,7 +110,7 @@
                             </div>
 
                             <div class="widget">
-                                <h1>Produtos em Destaque</h1>
+                                <h1><?php $this->lang->get('FEATUREDPRODUCTS'); ?></h1>
                                 <div class="widget_body">
                                     ...
                                 </div>
@@ -166,7 +121,6 @@
                 </div>
             </div>
         </section>
-
         <footer>
             <div class="container">
                 <div class="row">
@@ -199,14 +153,12 @@
             <div class="subarea">
                 <div class="container">
                     <div class="row">
-                        <div class="mx-auto" style="width: 600px;">
-                            <div class="col-xs-12 col-sm-8 col-sm-offset-2 no-padding">
-                                <form method="POST">
-                                    <input class="subemail" name="email" placeholder="<?php $this->lang->get('SUBSCRIBETEXT'); ?>">
-                                    <input type="submit" value="<?php $this->lang->get('SUBSCRIBEBUTTON'); ?>" />
-                                </form>
-                            </div>
-                        </div>    
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 no-padding">
+                            <form method="POST">
+                                <input class="subemail" name="email" placeholder="<?php $this->lang->get('SUBSCRIBETEXT'); ?>">
+                                <input type="submit" value="<?php $this->lang->get('SUBSCRIBEBUTTON'); ?>" />
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -214,7 +166,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-4">
-                            <a href="<?php echo BASE_URL; ?>" /><img width="150" src="<?php echo BASE_URL; ?>assets/images/logo.svg" /></a><br/><br/>
+                            <a href="<?php echo BASE_URL; ?>"><img width="150" src="<?php echo BASE_URL; ?>assets/images/logo.svg" /></a><br/><br/>
                             <strong>Slogan da Loja Virtual</strong><br/><br/>
                             Endereço da Loja Virtual
                         </div>
@@ -261,7 +213,7 @@
             <div class="copyright">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-6">© <span>Loja 3.0</span> - <?php $this->lang->get('ALLRIGHTRESERVED'); ?></div>
+                        <div class="col-sm-6">© <span>Loja 3.0</span> - <?php $this->lang->get('ALLRIGHTRESERVED'); ?>.</div>
                         <div class="col-sm-6">
                             <div class="payments">
                                 <img src="<?php echo BASE_URL; ?>assets/images/visa.png" />
@@ -274,12 +226,9 @@
                 </div>
             </div>
         </footer>
-
         <script type="text/javascript">var BASE_URL = '<?php echo BASE_URL; ?>';</script>
-
-        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-        <script src="<?php echo BASE_URL; ?>assets/js/jquery-3.5.1.slim.min.js"></script>
-        <script src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
-        <script src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
+        <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
     </body>
 </html>
